@@ -1,7 +1,7 @@
 # Docker and Kubernetes
 
 <p align="center">
-  <img src="utils/doc.gif">
+  <img src="utils/docker-logo.png">
 </p>
 
 ## **What is Docker?**
