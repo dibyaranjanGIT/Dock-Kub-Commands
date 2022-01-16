@@ -19,7 +19,7 @@ I am using Nginx but you can choose any there are multiple options like alpine,m
 
 -d : detach mode
 
-### □□~G□□~O Run an Image in interactive mode.
+### 🏃‍♂️ Run an Image in interactive mode.
 
 docker run -it ubuntu bash
 
@@ -45,57 +45,33 @@ Exposing One Container to Different Ports 🔌:
 
 `docker container top webhost`
 
-### 🔨 Remove Docker Container
+### Remove Docker Container
 
 `docker container rm [Container_Id]` or `docker rm $(docker ps -aq)`
 
-**Note:** You can specify multiple Container Id to remove multiple Container but you cannot remove a running container due to safety measures.
 
-Container ID looks like : 08gf345hjkmn but you can specify only first three letters of container to remove or to do various operations.
-
-`docker container rm 06e 9fd`
-
-To remove the running container you can use: 
-
-`docker container rm -f 06fe`
-
-
-## Docker: Volumes
-
-<p align="center">
-  <img src="utils/vol.png">
-</p>
-
-* Allow Sharing of Data,Files and Folder
-* Between host and container
-* Between containers
-
-`docker run --name website -v ${pwd}:/usr/share/nginx/html:ro -d -p 8080:80 nginx`
-
--v : volume
-
-### Volume between Container
-
-`docker run --name website-copy --volume-from website -d -p 8081:80 nginx`
-
-Note: website-copy and website are name of Containers
-
-### Dockerfile
+## 🔨 Building a Custom Image with Docker
+### Steps involved
+```
+1   apt-get update
+2   apt-get install -y python3
+3   apt-get install -y python3-pip
+4   pip3 install flask
+5   clear
+6   cd opt/
+7   clear
+8   apt install vim
+9   clear
+10  apt install curl
+11  clear
+12  vi app.py
+13  python3 app.py
+14  clear
+15  vi app.py
 
 ```
-FROM python:3.7-buster
-COPY . /app
-EXPOSE 5000
-WORKDIR /app
-RUN pip install -r requirements.txt
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "5000"]
-```
 
-Build your Docker Image Using:
 
-`docker build --tag website:latest .`
-
-This file is the copy of one of my ml project this is the way we create a dockerfile, dockerfile allow us to run all docker commands in one go.
 
 
 
