@@ -19,6 +19,10 @@ I am using Nginx but you can choose any there are multiple options like alpine,m
 
 -d : detach mode
 
+### □□~G□□~O Run an Image in interactive mode.
+
+docker run -it ubuntu bash
+
 ### 🏃‍♂️ Run Docker Container
 
 `docker container run --publish 80:80 --detach --name webhost nginx`
