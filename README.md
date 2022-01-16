@@ -53,21 +53,15 @@ Exposing One Container to Different Ports 🔌:
 ## 🔨 Building a Custom Image with Docker
 ### Steps involved
 ```
-1   apt-get update
-2   apt-get install -y python3
-3   apt-get install -y python3-pip
-4   pip3 install flask
-5   clear
-6   cd opt/
-7   clear
-8   apt install vim
-9   clear
-10  apt install curl
-11  clear
-12  vi app.py
-13  python3 app.py
-14  clear
-15  vi app.py
+1 apt-get update
+2 apt-get install -y python3
+3 apt-get install -y python3-pip
+4 pip3 install flask
+5 cd opt/
+6 apt install vim
+7 apt install curl
+8 vi app.py
+9 python3 app.py
 
 ```
 
