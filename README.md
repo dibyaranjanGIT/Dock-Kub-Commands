@@ -76,11 +76,17 @@ docker build . -t imagename
 MY_USER=dibyaranjan
 MY_PASSWORD=12345
 ```
-### Use below command to pass the environment details
+### 📙 Use below command to pass the environment details
 ```
 docker run --env-file=.env envvar
 ```
 
+## 📌 To PUSH your image
+```
+docker login
+docker build . -t  dibyaranjan/calciapp
+docker push dibyaranjan/calciapp
+```
 
 
 
