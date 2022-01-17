@@ -63,8 +63,23 @@ Exposing One Container to Different Ports 🔌:
 8 vi app.py
 9 python3 app.py
 
+#### Finally Run the below command
+
+docker build . -t imagename
+
 ```
 
+## To run the docker file with Enviroment variable
+### First you have create a .env file
+#### .env file content
+```
+MY_USER=dibyaranjan
+MY_PASSWORD=12345
+```
+### Use below command to pass the environment details
+```
+docker run --env-file=.env envvar
+```
 
 
 
